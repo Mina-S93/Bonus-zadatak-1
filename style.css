@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    background-color: hsl(210, 46%, 95%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: grid;
+    grid-template-areas:    'daniel daniel daniel jonathan kira'
+                            'jeanette patrick patrick patrick kira';
+    width: 75%;
+    gap: 1rem;
+    margin: 10vh auto;
+}
+
+#daniel{
+    grid-area: daniel;
+    background: url(images/bg-pattern-quotation.svg) no-repeat top 0% right 20%;
+    background-color:hsl(263, 55%, 52%);
+}
+
+#jonathan{
+    grid-area: jonathan;
+    background-color: hsl(217, 19%, 35%);
+}
+
+#kira{
+    grid-area: kira;
+}
+#jeanette{
+    grid-area: jeanette;
+}
+
+#patrick{
+    grid-area: patrick;
+    background-color: hsl(219, 29%, 14%);
+}
+
+.card{
+    padding: 1.3rem;
+    border-radius: 10px;
+    background-color:hsl(263, 55%, 52%);
+}
+
+.dark-card{
+    color: hsl(0, 0%, 100%);
+}
+
+.white-card{
+    color: hsl(217, 19%, 35%);
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 30px 30px 30px hsl(210, 18%, 87%);
+}
+
+.profile-info{
+    display: flex;
+}
+
+.profile-name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile-name p:last-of-type{
+    font-weight: 500;
+}
+
+.profile-img img{
+    border-radius: 50%;
+    border: 3px solid hsla(0, 0%, 100%, 0.5);
+    width: 70%;
+}
+
+.dark-card p:last-child{
+    color: hsla(0, 0%, 100%, 0.5);
+}
+
+.dark-card p:last-child{
+    color: hsla(0, 0%, 100%, 0.7);
+    line-height: 1.5;
+}
+
+.white-card p:last-child{
+    color: hsl(217, 19%, 35%, 0.5);
+}
+
+.white-card p:last-child{
+    color: hsla(217, 19%, 35%, 0.7);
+    line-height: 1.5;
+}
+
+.card > p:first-of-type{
+    margin: 1rem 0;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 700px){
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .card{
+        margin: 2%;
+    }
+}
+
+@media screen and (min-width: 701px) and (max-width:1099px){
+    .container{
+        grid-template-areas:'daniel jonathan'
+                            'kira kira'
+                            'jeanette patrick ';
+    }
+}
+
